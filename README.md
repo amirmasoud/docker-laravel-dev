@@ -62,7 +62,7 @@ version: "3.2"
 
 services:
   app:
-    image: amirmasoud32/laravel-docker-dev:[version]
+    image: amirmasoud32/docker-laravel-dev:[version]
     ports:
       - 8080:8080
     working_dir: /var/www/html
