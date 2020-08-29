@@ -14,6 +14,7 @@ Extenstion:
 * Curl
 * ZLib
 * XML
+* XMLWriter
 * Phar
 * intl
 * dom

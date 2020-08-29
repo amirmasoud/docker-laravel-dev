@@ -8,7 +8,7 @@ RUN apk --no-cache add php7 php7-fpm php7-opcache php7-sqlite3 php7-pgsql \
     php7-intl php7-dom php7-xmlreader php7-ctype php7-session php7-mbstring \
     php7-gd php7-sockets php7-zip php7-bz2 php7-pcntl php7-bcmath composer \
     php7-pecl-redis php7-pdo php7-pdo_sqlite php7-pdo_mysql php7-pdo_pgsql \
-    php7-fileinfo php7-tokenizer php7-pecl-memcache nginx supervisor curl && \
+    php7-fileinfo php7-tokenizer php7-pecl-memcache php7-xmlwriter nginx supervisor curl && \
     rm /etc/nginx/conf.d/default.conf
 
 # Configure nginx
@@ -24,7 +24,7 @@ COPY config/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 # Setup document root
 RUN mkdir -p /var/www/html
 
-# Make sure files/folders needed by the processes are accessable when they run 
+# Make sure files/folders needed by the processes are accessable when they run
 # under the nobody user
 RUN chown -R nobody.nobody /var/www/html && \
     chown -R nobody.nobody /run && \
