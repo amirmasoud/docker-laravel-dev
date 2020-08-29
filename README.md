@@ -52,3 +52,24 @@ Also:
 
 * Out of the box queue worker and task scheduler
 * Lightweight 127MB
+
+## How to use?
+
+docker-compose.yml:
+
+```yml
+version: "3.2"
+
+services:
+  app:
+    image: amirmasoud32/laravel-docker-dev:[version]
+    ports:
+      - 8080:8080
+    working_dir: /var/www/html
+    volumes:
+      - .:/var/www/html
+```
+
+# Default user?
+
+`nobody`
